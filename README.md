@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/xuxiao415/Angular4-Travis-Test.svg?branch=master)](https://travis-ci.org/xuxiao415/Angular4-Travis-Test)
 # My
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
