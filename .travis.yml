@@ -7,13 +7,13 @@ branches:
 before_install:
 - openssl aes-256-cbc -K $encrypted_25a08a935a63_key -iv $encrypted_25a08a935a63_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 400 ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
 before_script:
 - npm install -g firebase-tools
 - npm install -g @angular/cli
 script:
 - ng build --prod
 after_success:
-- ssh -i ~/.ssh/id_rsa grid.best "sh ~/ci/run.sh"
+- ssh root@grid.best "sh ~/ci/run.sh"
 addons:
   ssh_known_hosts: grid.best
