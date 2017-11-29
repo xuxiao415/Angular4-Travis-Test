@@ -5,7 +5,7 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_25a08a935a63_key -iv $encrypted_25a08a935a63_iv -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_25a08a935a63_key -iv $encrypted_25a08a935a63_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
 before_script:
 - npm install -g firebase-tools
 - npm install -g @angular/cli
