@@ -5,7 +5,8 @@ branches:
   only:
   - master
 before_install:
-- openssl aes-256-cbc -K $encrypted_25a08a935a63_key -iv $encrypted_25a08a935a63_iv -in id_rsa.enc -out ~/.ssh/id_rsa -d
+- openssl aes-256-cbc -K $encrypted_25a08a935a63_key -iv $encrypted_25a08a935a63_iv
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 400 ~/.ssh/id_rsa
 before_script:
 - npm install -g firebase-tools
@@ -13,6 +14,6 @@ before_script:
 script:
 - ng build --prod
 after_success:
-  - ssh grid.best "sh ~/ci/run.sh" # 请替换成自己的登录IP和登录用户
+- ssh grid.best "sh ~/ci/run.sh"
 addons:
   ssh_known_hosts: grid.best
