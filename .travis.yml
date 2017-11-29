@@ -14,4 +14,4 @@ script:
 after_success:
   - ssh grid.best "sh ~/ci/run.sh" # 请替换成自己的登录IP和登录用户
 addons:
-  ssh_known_hosts: 10.70.29.144
+  ssh_known_hosts: grid.best
